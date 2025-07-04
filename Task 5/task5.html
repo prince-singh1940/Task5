@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced E-Commerce Store</title>
+  <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced E-Commerce Store</h1>
+    <nav>
+      <ul>
+        <li><a onclick="navigate('home')">Home</a></li>
+        <li><a onclick="navigate('products')">Products</a></li>
+        <li><a onclick="navigate('cart')">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="filters" id="filters">
+    <label for="type-filter">Filter by Type:</label>
+    <select id="type-filter">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="fashion">Fashion</option>
+      <option value="books">Books</option>
+    </select>
+  </div>
+
+  <div class="search-bar" id="search-bar">
+    <input type="text" id="search-input" placeholder="Search for products...">
+  </div>
+
+  <main>
+    <section class="home-section" id="home-section">
+      <h2>Welcome to our Store</h2>
+      <p>Explore top categories like Electronics, Fashion, and Books. Click on the Products tab to start shopping!</p>
+    </section>
+
+    <section class="products" id="products-container" style="display:none;"></section>
+
+    <section class="cart" id="cart-section" style="display:none;">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button onclick="showPayment()">Proceed to Payment</button>
+    </section>
+
+    <section class="payment" id="payment-section" style="display:none;">
+      <h2>Payment Page</h2>
+      <p>Payment options coming soon. This is just a frontend placeholder.</p>
+    </section>
+</main>
+
+<script src="task5.js"></script>
+</body>
+</html>
